@@ -9,11 +9,11 @@ def print_matrix_integer(matrix=[[]]):
         for j in range(len(matrix[i])):
 
             # print both i and j together
-                print("{:d}".format(matrix[i][j]), end="")
+            print("{:d}".format(matrix[i][j]), end="")
 
-                # if j is not the last element then keep space and
-                # no new line at end
-                if j != (len(matrix[i]) - 1):
-                    print(" ", end="")
+            # if j is not the last element then keep space and
+            # no new line at end
+            if j != (len(matrix[i]) - 1):
+                print(" ", end="")
 
         print("")
