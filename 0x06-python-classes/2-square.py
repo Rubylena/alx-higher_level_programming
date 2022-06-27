@@ -3,9 +3,11 @@
 
 
 class Square:
-    ''' Intializing and instance of a class to raise error '''
+    ''' Represent a square '''
 
     def __init__(self, size):
+        ''' Intializing and instance of a class to raise error '''
+
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
         elif(size < 0):
