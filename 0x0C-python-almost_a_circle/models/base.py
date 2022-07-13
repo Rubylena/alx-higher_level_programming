@@ -55,8 +55,8 @@ class Base:
                 return new_file.write("[]")
             else:
                 for i in list_objs:
-                    export_list.append(Base.to_dictionary(i))
-                    # lo = [i.to_dictionary() for i in list_objs]
+                    # export_list.append(Base.to_dictionary(i))
+                    export_list = [i.to_dictionary() for i in list_objs]
                 new_file.write(Base.to_json_string(export_list))
 
     @staticmethod
