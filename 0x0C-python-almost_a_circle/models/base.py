@@ -29,6 +29,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Return the JSON serialization of a list of dicts.
+
         Args:
             list_dictionaries (list): A list of dictionaries.
         """
@@ -40,6 +41,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """Write the JSON serialization of a list of objects to a file.
+
         Args:
             list_objs (list): A list of inherited Base instances.
         """
@@ -52,5 +54,4 @@ class Base:
             else:
                 for i in list_objs:
                     export_list.append(cls.to_dictionary(i))
-                # lo = [i.to_dictionary() for i in list_objs]
                 new_file.write(cls.to_json_string(export_list))
