@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Define a base class """
+import json
 
 
 class Base:
@@ -54,4 +55,5 @@ class Base:
             else:
                 for i in list_objs:
                     export_list.append(cls.to_dictionary(i))
+                    # lo = [i.to_dictionary() for i in list_objs]
                 new_file.write(cls.to_json_string(export_list))
