@@ -1,11 +1,7 @@
 #!/usr/bin/node
 const x = parseInt(process.argv[2]);
 function factorial (x) {
-  if (isNaN(x)) {
-    return (1);
-  } else {
-    return (x * (x - 1));
-  }
+  return x === 0 || isNaN(x) ? 1 : (x * factorial(x - 1));
 }
 
 console.log(factorial(x));
