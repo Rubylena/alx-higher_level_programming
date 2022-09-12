@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""script that lists all State objects that contain the
-letter a from the database hbtn_0e_6_usa"""
+"""script that changes the name of a State object from
+the database hbtn_0e_6_usa"""
 from model_state import State, Base
 from sqlalchemy import (create_engine)
 from sys import argv
 from sqlalchemy.orm import sessionmaker
 
 
-def model_state():
+def model_state_change():
     """initializate function model_state for db"""
     state_engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         argv[1],
@@ -19,14 +19,15 @@ def model_state():
     State_Session = sessionmaker()
     State_Session.configure(bind=state_engine)
     session = State_Session()
-    rows = session.query(State).order_by(State.id).all()
 
-    for state in rows:
-        if 'a' in state.name:
-            print('{}: {}'.format(state.id, state.name))
+    row_update = session.query(State).filter_by(id=2).first()
+
+    row_update.name = 'New Mexico'
+
+    session.commit()
 
     session.close()
 
 
 if __name__ == '__main__':
-    model_state()
+    model_state_change()
