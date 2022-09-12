@@ -35,5 +35,6 @@ def get_dbase():
     dbase_cur.close()
     dbase.close()
 
+
 if __name__ == '__main__':
     get_dbase()
