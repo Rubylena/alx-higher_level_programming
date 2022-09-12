@@ -17,6 +17,7 @@ def model_city():
         pool_pre_ping=True)
 
     # associate it with our custom Session class
+    Base.metadata.create_all(city_engine)
     city_session = sessionmaker()
     city_session.configure(bind=city_engine)
     session = city_session()

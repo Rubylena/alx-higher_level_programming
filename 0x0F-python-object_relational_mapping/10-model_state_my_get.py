@@ -16,6 +16,8 @@ def model_state():
         pool_pre_ping=True)
 
     # associate it with our custom Session class
+    Base.metadata.create_all(state_engine)
+
     State_Session = sessionmaker()
     State_Session.configure(bind=state_engine)
     session = State_Session()
