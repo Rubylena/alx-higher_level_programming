@@ -23,8 +23,8 @@ def get_dbase():
     dbase_cur = dbase.cursor()
 
     # Esecuting dbase queries
-    dbase_cur.execute("SELECT * FROM states WHERE\
-            name='{:s}' ORDER BY id".format(argv[4]))
+    dbase_cur.execute("SELECT * FROM states WHERE BINARY\
+            name='{:s}' ORDER BY id ASC".format(argv[4]))
 
     # Fetches all the rows of a query result
     query_rows = dbase_cur.fetchall()
