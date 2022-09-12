@@ -21,11 +21,10 @@ def model_state_delete():
     Session.configure(bind=engine)
     session = Session()
 
-    rows = session.query(State).order_by(State.id).all()
+    rows = session.query(State).filter(State.name.contains('a'))
 
     for state in rows:
-        if 'a' in state.name:
-            session.delete(state)
+        session.delete(state)
 
     session.commit()
     session.close()
