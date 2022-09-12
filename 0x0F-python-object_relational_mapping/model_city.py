@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Write a Python file similar to model_state.py named
 model_city.py that contains the class definition of a City"""
 from sqlalchemy import Column, Integer, String, ForeignKey
