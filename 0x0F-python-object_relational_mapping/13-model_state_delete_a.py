@@ -2,7 +2,7 @@
 """script that deletes all State objects with a name
 containing the letter a from the database hbtn_0e_6_usa
 """
-from model_state import State
+from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sys import argv
 from sqlalchemy import create_engine
@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 
 def model_state_delete():
     """function that delete the letter a"""
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         argv[1],
         argv[2],
         argv[3]),
@@ -32,4 +32,5 @@ def model_state_delete():
 
 
 if __name__ == '__main__':
+    """not executed when imported"""
     model_state_delete()
