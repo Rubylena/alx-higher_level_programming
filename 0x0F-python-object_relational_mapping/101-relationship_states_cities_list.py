@@ -8,10 +8,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from relationship_state import Base, State
 from relationship_city import City
 
+
 def list_state_cities():
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                            format(argv[1], argv[2], argv[3]),
-                            pool_pre_ping=True)
+                           format(argv[1], argv[2], argv[3]),
+                           pool_pre_ping=True)
     session = sessionmaker(bind=engine)()
 
     result = session.query(State).all()
