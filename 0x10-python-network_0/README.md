@@ -13,7 +13,7 @@ server set up on a container provided by alx.
 
 * **2. cURL Method**
   * [2-delete.sh](./2-delete.sh): Bash script that sends a `DELETE` request to
-  a given URL and displays the response body.
+  a given URL and displays the response body. Your script must send a POST request with the contents of a file, passed with the filename as the second argument of the script, in the body of the request.
 
 * **3. cURL only methods**
   * [3-methods.sh](./3-methods.sh): Bash script that displays all HTTP methods
