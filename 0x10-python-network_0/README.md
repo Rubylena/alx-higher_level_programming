@@ -21,7 +21,7 @@ server set up on a container provided by alx.
 
 * **4. cURL headers**
   * [4-header.sh](./4-header.sh): Bash script that sends a `GET` request to a
-  given URL with a header variable `X-HolbertonSchool-User-Id=98` and displays
+  given URL with a header variable `X-School-User-Id=98` and displays
   the response body.
 
 * **5. cURL POST parameters**
