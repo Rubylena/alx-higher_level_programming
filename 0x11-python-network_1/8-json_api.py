@@ -22,7 +22,7 @@ def post_q():
             id_no = j_format.get('id')
             name = j_format.get('name')
             print('[{}] <{}>'.format(id_no, name))
-    except requests.exceptions.InvalidJSONError:
+    except TypeError:
         print('Not a valid JSON')
 
 
