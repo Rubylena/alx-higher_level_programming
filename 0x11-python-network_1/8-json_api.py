@@ -8,7 +8,7 @@ def post_q():
     """post a variable"""
     try:
         q = argv[1]
-    except IndexError:
+    except:
         q = ''
 
     url = 'http://0.0.0.0:5000/search_user'
@@ -22,7 +22,7 @@ def post_q():
             id_no = j_format.get('id')
             name = j_format.get('name')
             print('[{}] {}'.format(id_no, name))
-    except (requests.exceptions.invalidJSONError, TypeError):
+    except:
         print('Not a valid JSON')
 
 
