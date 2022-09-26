@@ -21,7 +21,7 @@ def post_q():
         else:
             id_no = j_format.get('id')
             name = j_format.get('name')
-            print('[{}] <{}>'.format(id_no, name))
+            print('[{}] {}'.format(id_no, name))
     except TypeError:
         print('Not a valid JSON')
 
