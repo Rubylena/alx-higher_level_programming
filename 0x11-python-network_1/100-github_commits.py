@@ -7,7 +7,6 @@ from sys import argv
 def get_commits():
     """display Github id"""
     url = 'https://api.github.com/repos/{}/{}/commits'.format(argv[2], argv[1])
-    print(url)
     req = requests.get(url)
     json = req.json()
 
