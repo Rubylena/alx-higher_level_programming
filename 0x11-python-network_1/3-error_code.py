@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """initialize"""
-from urllib.parse import urlencode
 from urllib.request import urlopen, Request
-from urllib.error import HTTPError
+import urllib.error
 from sys import argv
 
 
@@ -14,7 +13,7 @@ def errorCode():
     try:
         with urlopen(req) as response:
             print(response.read().decode('utf-8'))
-    except HTTPError as e:
+    except urllib.error.HTTPError as e:
         print('Error code: {}`'.format(e.code))
 
 
