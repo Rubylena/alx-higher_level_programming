@@ -6,8 +6,7 @@ request.get(process.argv[2], function (error, response, body) {
   let counter = 0;
   result.map(data => {
     const wedgeAntilles = 'https://swapi-api.hbtn.io/api/people/18/';
-    if (data.characters.includes(wedgeAntilles)) { counter += 1; }
-    return null;
+    return (data.characters.includes(wedgeAntilles)) ? counter++ : counter;
   });
   console.log(counter);
 });
